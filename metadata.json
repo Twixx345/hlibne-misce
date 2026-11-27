@@ -1,0 +1,6 @@
+{
+  "name": "Хлібне Місце — Пекарня та спешелті кав'ярня",
+  "description": "Реміснича пекарня та спешелті кав'ярня на Подолі. Хліб на живій заквасці 36-годинної ферментації, листкова випічка, сніданки all-day та фільтр-кава.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

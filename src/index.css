@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  --color-linen: #F6F3EE;
+  --color-sand: #EAE3D5;
+  --color-espresso: #1E1916;
+  --color-terracotta: #B85D3B;
+  --color-sage: #6B745D;
+
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Manrope", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #F6F3EE;
+    color: #1E1916;
+    font-family: "Manrope", -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: #F6F3EE;
+    color: #1E1916;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: #B85D3B;
+    color: #F6F3EE;
+  }
+}
+
+@keyframes oven-marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-oven-marquee {
+  display: flex;
+  width: max-content;
+  animation: oven-marquee 38s linear infinite;
+}
+
+.animate-oven-marquee:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-oven-marquee {
+    animation: none;
+  }
+}
